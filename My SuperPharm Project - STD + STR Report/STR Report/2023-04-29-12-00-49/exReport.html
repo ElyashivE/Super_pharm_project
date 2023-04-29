@@ -1,0 +1,2017 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>QAV automation report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Regression cycle</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Apr 29, 2023 12:00:58 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 1 - Registration first name</p>
+            <p class="text-sm">
+              <span>12:00:58 PM</span> / <span>00:00:00:880</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 1 - Registration first name</h5>
+<span class='badge badge-success'>04.29.2023 12:00:58 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:00:59 PM</span>
+<span class='badge badge-default'>00:00:00:880</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to enter invalid (number) input to first-name field and expected to error msg</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:00:59 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - we got error as expected</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:00:59 PM</td>
+        <td>
+          actual error: נא להזין שם תקין
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:00:59 PM</td>
+        <td>
+          expected error: נא להזין שם תקין
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 2 - Registration last name</p>
+            <p class="text-sm">
+              <span>12:00:58 PM</span> / <span>00:00:01:643</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 2 - Registration last name</h5>
+<span class='badge badge-success'>04.29.2023 12:00:58 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:01:00 PM</span>
+<span class='badge badge-default'>00:00:01:643</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to enter invalid input (number) to last-name field and expected to error msg</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:01:00 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - we got error as expected</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:00 PM</td>
+        <td>
+          actual error: נא להזין שם תקין
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:00 PM</td>
+        <td>
+          expected error: נא להזין שם תקין
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 3 - Registration Email</p>
+            <p class="text-sm">
+              <span>12:00:58 PM</span> / <span>00:00:02:334</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 3 - Registration Email</h5>
+<span class='badge badge-success'>04.29.2023 12:00:58 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:01:00 PM</span>
+<span class='badge badge-default'>00:00:02:334</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to enter invalid input to mail (double @@) field and expected to error msg</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:01:00 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - we got error as expected</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:00 PM</td>
+        <td>
+          actual error: נא להזין כתובת דוא"ל תקינה
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:00 PM</td>
+        <td>
+          expected error: נא להזין כתובת דוא"ל תקינה
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 4 - Login Email and password</p>
+            <p class="text-sm">
+              <span>12:00:58 PM</span> / <span>00:00:05:480</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 4 - Login Email and password</h5>
+<span class='badge badge-success'>04.29.2023 12:00:58 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:01:04 PM</span>
+<span class='badge badge-default'>00:00:05:480</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to leave the fields mail and password empty and expected error msg</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:01:04 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - we got error as expected</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:04 PM</td>
+        <td>
+          actual error: נא למלא שדה זה
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:04 PM</td>
+        <td>
+          expected error: נא למלא שדה זה
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:01:04 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - we got error as expected</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:04 PM</td>
+        <td>
+          actual error: נא למלא שדה זה
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:04 PM</td>
+        <td>
+          expected error: נא למלא שדה זה
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 5 - Check item price</p>
+            <p class="text-sm">
+              <span>12:01:09 PM</span> / <span>00:00:05:063</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 5 - Check item price</h5>
+<span class='badge badge-success'>04.29.2023 12:01:09 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:01:14 PM</span>
+<span class='badge badge-default'>00:00:05:063</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to add item to cart and check the price added correctly</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:01:14 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - the compared prices are the same</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:14 PM</td>
+        <td>
+          the compared price before cart is: 4.90
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:14 PM</td>
+        <td>
+          the compared price after cart is: 4.90
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 6 - Check item price updated</p>
+            <p class="text-sm">
+              <span>12:01:09 PM</span> / <span>00:00:22:145</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 6 - Check item price updated</h5>
+<span class='badge badge-success'>04.29.2023 12:01:09 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:01:31 PM</span>
+<span class='badge badge-default'>00:00:22:145</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to check calc after changing item amount</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:01:31 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - the compared prices are the same</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:31 PM</td>
+        <td>
+          the compared prices are: 9.8 | 9.80
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 7 - Check cart float number</p>
+            <p class="text-sm">
+              <span>12:01:09 PM</span> / <span>00:00:22:176</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 7 - Check cart float number</h5>
+<span class='badge badge-success'>04.29.2023 12:01:09 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:01:31 PM</span>
+<span class='badge badge-default'>00:00:22:176</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to check the cart float number with the items amount in the cart</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:01:31 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - the compared numbers are the same</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:31 PM</td>
+        <td>
+          cart float num is: 2
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:01:31 PM</td>
+        <td>
+          sum of items amount is: 2
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 8 - Add and remove item by less btn</p>
+            <p class="text-sm">
+              <span>12:01:09 PM</span> / <span>00:01:09:814</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 8 - Add and remove item by less btn</h5>
+<span class='badge badge-success'>04.29.2023 12:01:09 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:02:19 PM</span>
+<span class='badge badge-default'>00:01:09:814</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to remove item from cart by amount less button</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:02:19 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - item removed from cart</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:02:19 PM</td>
+        <td>
+          empty cart text is: סל הקניות שלך ריק
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 9 - Remove item by x btn</p>
+            <p class="text-sm">
+              <span>12:01:09 PM</span> / <span>00:01:55:652</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 9 - Remove item by x btn</h5>
+<span class='badge badge-success'>04.29.2023 12:01:09 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:03:05 PM</span>
+<span class='badge badge-default'>00:01:55:652</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to remove item from cart by (x) button</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:03:05 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - item removed from cart</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:03:05 PM</td>
+        <td>
+          empty cart text is: סל הקניות שלך ריק
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 10 - Item content error test</p>
+            <p class="text-sm">
+              <span>12:03:08 PM</span> / <span>00:00:01:207</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 10 - Item content error test</h5>
+<span class='badge badge-success'>04.29.2023 12:03:08 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:03:09 PM</span>
+<span class='badge badge-default'>00:00:01:207</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to get error msg when try to add item to cart with 0 amount via item content window</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:03:09 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - we got error as expected</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:03:09 PM</td>
+        <td>
+          actual result: נא להוסיף מוצר נוסף למימוש המבצע
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:03:09 PM</td>
+        <td>
+          expected result: נא להוסיף מוצר נוסף למימוש המבצע
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 11 - Add item to cart via content window</p>
+            <p class="text-sm">
+              <span>12:03:08 PM</span> / <span>00:00:07:078</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 11 - Add item to cart via content window</h5>
+<span class='badge badge-success'>04.29.2023 12:03:08 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:03:15 PM</span>
+<span class='badge badge-default'>00:00:07:078</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to add item to cart via item content window</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:03:15 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - the compared amount are the same</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:03:15 PM</td>
+        <td>
+          actual result: 2
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:03:15 PM</td>
+        <td>
+          expected result: 2
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 12 - Discount check test</p>
+            <p class="text-sm">
+              <span>12:03:08 PM</span> / <span>00:00:21:966</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 12 - Discount check test</h5>
+<span class='badge badge-success'>04.29.2023 12:03:08 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:03:30 PM</span>
+<span class='badge badge-default'>00:00:21:966</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test if the discount is calc correctly</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:03:30 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - the discount is ok</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:03:30 PM</td>
+        <td>
+          values: discount- 20.0 old-price- 34.9 new-price- 27.9
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:03:30 PM</td>
+        <td>
+          actual result: 27.9
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:03:30 PM</td>
+        <td>
+          expected result: 27.9
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 13 - Verify proper filtering</p>
+            <p class="text-sm">
+              <span>12:03:56 PM</span> / <span>00:00:05:302</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 13 - Verify proper filtering</h5>
+<span class='badge badge-success'>04.29.2023 12:03:56 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:04:01 PM</span>
+<span class='badge badge-default'>00:00:05:302</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to verify proper elements shown after filter results</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:04:01 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - all the elements after filter are in the price range allowed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:01 PM</td>
+        <td>
+          actual result: 11
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:01 PM</td>
+        <td>
+          expected result: 11
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 14 - Verify that all elements got picture</p>
+            <p class="text-sm">
+              <span>12:03:56 PM</span> / <span>00:00:08:791</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">test 14 - Verify that all elements got picture</h5>
+<span class='badge badge-success'>04.29.2023 12:03:56 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:04:05 PM</span>
+<span class='badge badge-default'>00:00:08:791</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to find element without picture</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:04:05 PM</td>
+        <td>
+          <span class='badge white-text red'>test failed - see below elements with no picture</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:04:05 PM</td>
+        <td>
+          <ul><li>ACUVUE 90DAY ACUVUE OASYS 1</li></ul>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:05 PM</td>
+        <td>
+          actual result: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:05 PM</td>
+        <td>
+          expected result: 0
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 15 - Black tag compare</p>
+            <p class="text-sm">
+              <span>12:04:09 PM</span> / <span>00:00:02:082</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">test 15 - Black tag compare</h5>
+<span class='badge badge-success'>04.29.2023 12:04:09 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:04:11 PM</span>
+<span class='badge badge-default'>00:00:02:082</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to compare the black tags , expected : חדש באתר יהיה הכי הרבה</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:04:11 PM</td>
+        <td>
+          <span class='badge white-text red'>test failed - מופיע הכי הרבה מחיר מיוחד!</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:11 PM</td>
+        <td>
+          חדש באתר count: 0
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:11 PM</td>
+        <td>
+          בלעדי לאתר count: 6
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:11 PM</td>
+        <td>
+          מחיר מיוחד! count: 12
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 16 - Navigation to item page when item out of stock</p>
+            <p class="text-sm">
+              <span>12:04:20 PM</span> / <span>00:00:04:855</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">test 16 - Navigation to item page when item out of stock</h5>
+<span class='badge badge-success'>04.29.2023 12:04:20 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:04:25 PM</span>
+<span class='badge badge-default'>00:00:04:855</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to try navigate to item page via search quick access when item out of stock</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:04:25 PM</td>
+        <td>
+          <span class='badge white-text red'>test failed - wrong page found</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:25 PM</td>
+        <td>
+          header text: 400 Bad Request
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 17 - Navigation to item page</p>
+            <p class="text-sm">
+              <span>12:04:20 PM</span> / <span>00:00:12:358</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 17 - Navigation to item page</h5>
+<span class='badge badge-success'>04.29.2023 12:04:20 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:04:32 PM</span>
+<span class='badge badge-default'>00:00:12:358</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to navigate to item page via search quick access</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:04:32 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - item page found</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:32 PM</td>
+        <td>
+          actual item title is: 3OL קמומילו אורל- ג'ל לטיפול בפה אצל תינוקות
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:04:32 PM</td>
+        <td>
+          expected item title is: 3OL קמומילו אורל- ג'ל לטיפול בפה אצל תינוקות
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 18 - Search item via category submenu</p>
+            <p class="text-sm">
+              <span>12:04:20 PM</span> / <span>00:00:54:465</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 18 - Search item via category submenu</h5>
+<span class='badge badge-success'>04.29.2023 12:04:20 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:05:14 PM</span>
+<span class='badge badge-default'>00:00:54:465</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to search item via category submenus - search content need to pass 10</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:05:14 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - number of elements shown in the result are higher then 10</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:14 PM</td>
+        <td>
+          actual result is: 23
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:14 PM</td>
+        <td>
+          expected result is: 10
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 19 - Find the cheapest item</p>
+            <p class="text-sm">
+              <span>12:05:19 PM</span> / <span>00:00:02:666</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 19 - Find the cheapest item</h5>
+<span class='badge badge-success'>04.29.2023 12:05:19 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:05:22 PM</span>
+<span class='badge badge-default'>00:00:02:666</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to find the cheapest price between 5 items and see if its cheaper then 28</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:05:22 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - the cheapest price is lower </span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:22 PM</td>
+        <td>
+          actual price is: 25.9
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:22 PM</td>
+        <td>
+          expected price is : 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:22 PM</td>
+        <td>
+          the title name is: הימלאיה משחת שיניים מלבינה
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 20 - Search and Filter match to result box</p>
+            <p class="text-sm">
+              <span>12:05:19 PM</span> / <span>00:00:07:925</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 20 - Search and Filter match to result box</h5>
+<span class='badge badge-success'>04.29.2023 12:05:19 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:05:27 PM</span>
+<span class='badge badge-default'>00:00:07:925</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to search and filter and verify the result box show the exact content we searched</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:05:27 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - all the result shows the exact content we searched</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:27 PM</td>
+        <td>
+          search result count: 26
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:27 PM</td>
+        <td>
+          matching titles count: 26
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 21 - Logo home page</p>
+            <p class="text-sm">
+              <span>12:05:33 PM</span> / <span>00:00:03:714</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 21 - Logo home page</h5>
+<span class='badge badge-success'>04.29.2023 12:05:33 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:05:37 PM</span>
+<span class='badge badge-default'>00:00:03:714</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to check logo btn navigate to home page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:35 PM</td>
+        <td>
+          navigate to cart pass ok
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:37 PM</td>
+        <td>
+          navigate back to home page pass ok
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:05:37 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 22 - Logo size</p>
+            <p class="text-sm">
+              <span>12:05:33 PM</span> / <span>00:00:03:807</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 22 - Logo size</h5>
+<span class='badge badge-success'>04.29.2023 12:05:33 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:05:37 PM</span>
+<span class='badge badge-default'>00:00:03:807</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to check the the size is affected by css values and not the default values (JSE)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:05:37 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - width & height affected by css</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:37 PM</td>
+        <td>
+          actual width: 130 | actual height: 46
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:37 PM</td>
+        <td>
+          width CSS value: 130 | height CSS value: 46
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:37 PM</td>
+        <td>
+          width JSE value: 1370 | height JSE value: 467
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="23"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 23 - Sort and filter</p>
+            <p class="text-sm">
+              <span>12:05:42 PM</span> / <span>00:00:13:612</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">test 23 - Sort and filter</h5>
+<span class='badge badge-success'>04.29.2023 12:05:42 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:05:56 PM</span>
+<span class='badge badge-default'>00:00:13:612</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to check element sorted by price ascend amd price range</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:05:56 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed - items sort by price from cheap to expensive as expected</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:56 PM</td>
+        <td>
+          price list order:
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:56 PM</td>
+        <td>
+          <ul><li>9.0</li><li>10.0</li><li>10.9</li><li>15.0</li><li>19.9</li><li>20.0</li><li>20.0</li><li>20.0</li><li>22.0</li><li>24.9</li><li>25.0</li><li>25.9</li><li>29.0</li><li>29.0</li><li>29.0</li><li>29.0</li><li>29.0</li><li>29.9</li><li>29.9</li><li>29.9</li><li>29.9</li><li>30.0</li><li>30.0</li><li>30.9</li><li>32.0</li><li>34.9</li><li>34.9</li><li>34.9</li><li>34.9</li><li>34.9</li></ul>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:05:56 PM</td>
+        <td>
+          test failed - min and max prices not in range
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:56 PM</td>
+        <td>
+          expected items price range: 9.0-20.0
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:05:56 PM</td>
+        <td>
+          actual items price range: 9.0-34.9
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 24 - Add filter and check title</p>
+            <p class="text-sm">
+              <span>12:05:42 PM</span> / <span>00:00:14:812</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">test 24 - Add filter and check title</h5>
+<span class='badge badge-success'>04.29.2023 12:05:42 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:05:57 PM</span>
+<span class='badge badge-default'>00:00:14:812</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to add another filter by manufacture and check the elements title contains the manufacture name</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:05:57 PM</td>
+        <td>
+          <span class='badge white-text yellow'>error!!! exception</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="25"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 25 - Compare 2 list content</p>
+            <p class="text-sm">
+              <span>12:05:42 PM</span> / <span>00:00:20:830</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">test 25 - Compare 2 list content</h5>
+<span class='badge badge-success'>04.29.2023 12:05:42 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:06:03 PM</span>
+<span class='badge badge-default'>00:00:20:830</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to compare 2 lists size&content of category section - list1 its the home page category and list 2 its via menu category</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:06:03 PM</td>
+        <td>
+          <span class='badge white-text red'>test failed - the failed  compared content is:</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:06:03 PM</td>
+        <td>
+          <ul><li>צעצועים</li><li>דרמוקוסמטיקה</li></ul>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:03 PM</td>
+        <td>
+          list 1 size: 14
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:03 PM</td>
+        <td>
+          list 2 size: 13
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 26 - Add to favorite</p>
+            <p class="text-sm">
+              <span>12:06:09 PM</span> / <span>00:00:24:500</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">test 26 - Add to favorite</h5>
+<span class='badge badge-success'>04.29.2023 12:06:09 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:06:34 PM</span>
+<span class='badge badge-default'>00:00:24:500</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to try add item to favorite list</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:06:34 PM</td>
+        <td>
+          <span class='badge white-text yellow'>error!!! exception</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 27 - Add item to cart </p>
+            <p class="text-sm">
+              <span>12:06:09 PM</span> / <span>00:00:24:540</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 27 - Add item to cart </h5>
+<span class='badge badge-success'>04.29.2023 12:06:09 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:06:34 PM</span>
+<span class='badge badge-default'>00:00:24:540</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to check item out of stock add to cart btn</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:06:34 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:34 PM</td>
+        <td>
+          cart num before click is: 0
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:34 PM</td>
+        <td>
+          cart num after click is: 0
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="28"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 28 - ID field</p>
+            <p class="text-sm">
+              <span>12:06:38 PM</span> / <span>00:00:09:751</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 28 - ID field</h5>
+<span class='badge badge-success'>04.29.2023 12:06:38 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:06:47 PM</span>
+<span class='badge badge-default'>00:00:09:751</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to check the ID field that get only numbers</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:06:47 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:47 PM</td>
+        <td>
+          input string: abcde
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:47 PM</td>
+        <td>
+          actual result: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:47 PM</td>
+        <td>
+          expected result: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:06:47 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:47 PM</td>
+        <td>
+          input string: 123a
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:47 PM</td>
+        <td>
+          actual result: 123
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:47 PM</td>
+        <td>
+          expected result: 123
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 29 - Phone field</p>
+            <p class="text-sm">
+              <span>12:06:38 PM</span> / <span>00:00:10:024</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 29 - Phone field</h5>
+<span class='badge badge-success'>04.29.2023 12:06:38 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:06:48 PM</span>
+<span class='badge badge-default'>00:00:10:024</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to check the Phone field get the allowed amount of numbers</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          input string: 123456
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          actual result: הטלפון שהוזן אינו תקין
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          expected result: הטלפון שהוזן אינו תקין
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          input string: 1234567
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          actual result: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          expected result: 
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="30"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">test 30 - First name field</p>
+            <p class="text-sm">
+              <span>12:06:38 PM</span> / <span>00:00:10:301</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">test 30 - First name field</h5>
+<span class='badge badge-success'>04.29.2023 12:06:38 PM</span>
+<span class='badge badge-danger'>04.29.2023 12:06:48 PM</span>
+<span class='badge badge-default'>00:00:10:301</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">the purpose of the test to check the First name field that get only hebrew letters</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          input string: 123456
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          actual result: רק אותיות בעברית, בבקשה
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          expected result: רק אותיות בעברית, בבקשה
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          input string: abcde
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          actual result: רק אותיות בעברית, בבקשה
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          expected result: רק אותיות בעברית, בבקשה
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          <span class='badge white-text green'>test passed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          input string: ישראל
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          actual result: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:06:48 PM</td>
+        <td>
+          expected result: 
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Apr 29, 2023 12:00:58 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Apr 29, 2023 12:06:48 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>23</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>7</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='76%'>
+<b>23</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='23%'><b>7</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='25%'><b>29</b> events passed</small></div>
+<div>
+<small data-tooltip='7%'><b>9</b> events failed,
+<b data-tooltip='%'>75</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"test 1 - Registration first name":0.88,"test 2 - Registration last name":1.643,"test 3 - Registration Email":2.334,"test 4 - Login Email and password":5.48,"test 5 - Check item price":5.063,"test 6 - Check item price updated":22.145,"test 7 - Check cart float number":22.176,"test 8 - Add and remove item by less btn":69.814,"test 9 - Remove item by x btn":115.652,"test 10 - Item content error test":1.207,"test 11 - Add item to cart via content window":7.078,"test 12 - Discount check test":21.966,"test 13 - Verify proper filtering":5.302,"test 14 - Verify that all elements got picture":8.791,"test 15 - Black tag compare":2.082,"test 16 - Navigation to item page when item out of stock":4.855,"test 17 - Navigation to item page":12.358,"test 18 - Search item via category submenu":54.465,"test 19 - Find the cheapest item":2.666,"test 20 - Search and Filter match to result box":7.925,"test 21 - Logo home page":3.714,"test 22 - Logo size":3.807,"test 23 - Sort and filter":13.612,"test 24 - Add filter and check title":14.812,"test 25 - Compare 2 list content":20.83,"test 26 - Add to favorite":24.5,"test 27 - Add item to cart ":24.54,"test 28 - ID field":9.751,"test 29 - Phone field":10.024,"test 30 - First name field":10.301
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 23,
+failParent: 7,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 29,
+failEvents: 9,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 75
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

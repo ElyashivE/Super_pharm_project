@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [anyName]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SuperPharmProject(failed)">
+    <classes>
+      <class name="Testing.TestNG_On_Sale">
+        <methods>
+          <include name="T11_Add_item_to_cart_via_content_window_test"/>
+          <include name="AfterClass"/>
+          <include name="BeforeClass"/>
+        </methods>
+      </class> <!-- Testing.TestNG_On_Sale -->
+      <class name="Testing.TestNG_Cart">
+        <methods>
+          <include name="T06_Check_item_price_updated_test"/>
+          <include name="AfterClass"/>
+          <include name="BeforeClass"/>
+          <include name="T07_Check_cart_float_number_test"/>
+        </methods>
+      </class> <!-- Testing.TestNG_Cart -->
+    </classes>
+  </test> <!-- SuperPharmProject(failed) -->
+</suite> <!-- Failed suite [anyName] -->

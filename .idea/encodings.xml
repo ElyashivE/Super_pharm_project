@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Assists/ExtentManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Assists/Functions.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/Jframe.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/SuperPharm.xml" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_Cart.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_Categories.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_Coupons.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_Favorite_and_No_inventory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_Items_and_Price_Compare.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_Join_lifestyle.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_Links.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_Logo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_On_Sale.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_Optic.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/project-packages/java/Testing/TestNG_RegisterAndLogin.java" charset="UTF-8" />
+    <file url="PROJECT" charset="windows-1255" />
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="anyName" verbose="1">
+    <test name="SuperPharmProject">
+        <classes>
+            <class name="Testing.TestNG_RegisterAndLogin"/>
+            <class name="Testing.TestNG_Cart"/>
+            <class name="Testing.TestNG_On_Sale"/>
+            <class name="Testing.TestNG_Optic"/>
+            <class name="Testing.TestNG_Coupons"/>
+            <class name="Testing.TestNG_Links"/>
+            <class name="Testing.TestNG_Items_and_Price_Compare"/>
+            <class name="Testing.TestNG_Logo"/>
+            <class name="Testing.TestNG_Categories"/>
+            <class name="Testing.TestNG_Favorite_and_No_inventory"/>
+            <class name="Testing.TestNG_Join_lifestyle"/>
+
+        </classes>
+    </test>
+</suite>

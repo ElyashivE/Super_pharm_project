@@ -1,0 +1,26 @@
+The Super-Pharm project:
+-------------------------------------
+
+Intrudaction:
+---------------------
+The website is used to look for items and make purchases at https://shop.super-pharm.co.il/.
+
+The Testing:
+-------------------
+The testing concentrated on field validation, end-to-end procedures, item and price comparison, and filltering.
+
+Explained Code Structure: 
+------------------------------
+The STD paper served as the foundation for the project's overall basic structure.
+- The package Testing includes 11 classes of TestNG, a total of 30 tests.
+Additionally, we have the Jframe class.
+- The package Assists  includes extent report class and general Function class.
+
+Jframe Content:
+------------------------
+By clicking the preferred button, the same class will execute separately.
+Alternatively, you can use the button labeled "Run All Tests" to run every test at once.
+Also include two additional buttons that can either display the STR report or the STD document.
+
+the packages and classes located under:
+Super_pharm_project\src\project-packages\java\

@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>TestNG:  SuperPharmProject</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>SuperPharmProject</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>30/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Apr 29 12:15:58 IDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>343 seconds (343822 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Testing.TestNG_RegisterAndLogin.T02_Registration_last_name_test()'><b>T02_Registration_last_name_test</b><br>Test class: Testing.TestNG_RegisterAndLogin</td>
+<td></td>
+<td>0</td>
+<td>Testing.TestNG_RegisterAndLogin@6b4eb215</td></tr>
+<tr>
+<td title='Testing.TestNG_Cart.T09_Remove_item_by_x_btn_test()'><b>T09_Remove_item_by_x_btn_test</b><br>Test class: Testing.TestNG_Cart</td>
+<td></td>
+<td>51</td>
+<td>Testing.TestNG_Cart@6aef4fa</td></tr>
+<tr>
+<td title='Testing.TestNG_Join_lifestyle.T29_Phone_field()'><b>T29_Phone_field</b><br>Test class: Testing.TestNG_Join_lifestyle</td>
+<td></td>
+<td>0</td>
+<td>Testing.TestNG_Join_lifestyle@5e4f7506</td></tr>
+<tr>
+<td title='Testing.TestNG_Join_lifestyle.T30_First_name_field()'><b>T30_First_name_field</b><br>Test class: Testing.TestNG_Join_lifestyle</td>
+<td></td>
+<td>0</td>
+<td>Testing.TestNG_Join_lifestyle@5e4f7506</td></tr>
+<tr>
+<td title='Testing.TestNG_On_Sale.T12_Discount_check_test()'><b>T12_Discount_check_test</b><br>Test class: Testing.TestNG_On_Sale</td>
+<td></td>
+<td>36</td>
+<td>Testing.TestNG_On_Sale@7ce21353</td></tr>
+<tr>
+<td title='Testing.TestNG_On_Sale.T10_Item_content_error_test()'><b>T10_Item_content_error_test</b><br>Test class: Testing.TestNG_On_Sale</td>
+<td></td>
+<td>1</td>
+<td>Testing.TestNG_On_Sale@7ce21353</td></tr>
+<tr>
+<td title='Testing.TestNG_Logo.T21_Logo_home_page_test()'><b>T21_Logo_home_page_test</b><br>Test class: Testing.TestNG_Logo</td>
+<td></td>
+<td>19</td>
+<td>Testing.TestNG_Logo@2303b402</td></tr>
+<tr>
+<td title='Testing.TestNG_On_Sale.T11_Add_item_to_cart_via_content_window_test()'><b>T11_Add_item_to_cart_via_content_window_test</b><br>Test class: Testing.TestNG_On_Sale</td>
+<td></td>
+<td>5</td>
+<td>Testing.TestNG_On_Sale@7ce21353</td></tr>
+<tr>
+<td title='Testing.TestNG_Items_and_Price_Compare.T19_find_the_cheapest_item_test()'><b>T19_find_the_cheapest_item_test</b><br>Test class: Testing.TestNG_Items_and_Price_Compare</td>
+<td></td>
+<td>2</td>
+<td>Testing.TestNG_Items_and_Price_Compare@e5715c3</td></tr>
+<tr>
+<td title='Testing.TestNG_Optic.T13_verify_proper_filtering()'><b>T13_verify_proper_filtering</b><br>Test class: Testing.TestNG_Optic</td>
+<td></td>
+<td>4</td>
+<td>Testing.TestNG_Optic@1526b1c2</td></tr>
+<tr>
+<td title='Testing.TestNG_RegisterAndLogin.T01_Registration_first_name_test()'><b>T01_Registration_first_name_test</b><br>Test class: Testing.TestNG_RegisterAndLogin</td>
+<td></td>
+<td>0</td>
+<td>Testing.TestNG_RegisterAndLogin@6b4eb215</td></tr>
+<tr>
+<td title='Testing.TestNG_Join_lifestyle.T28_ID_field()'><b>T28_ID_field</b><br>Test class: Testing.TestNG_Join_lifestyle</td>
+<td></td>
+<td>5</td>
+<td>Testing.TestNG_Join_lifestyle@5e4f7506</td></tr>
+<tr>
+<td title='Testing.TestNG_Optic.T14_verify_that_all_elements_got_picture()'><b>T14_verify_that_all_elements_got_picture</b><br>Test class: Testing.TestNG_Optic</td>
+<td></td>
+<td>2</td>
+<td>Testing.TestNG_Optic@1526b1c2</td></tr>
+<tr>
+<td title='Testing.TestNG_Cart.T07_Check_cart_float_number_test()'><b>T07_Check_cart_float_number_test</b><br>Test class: Testing.TestNG_Cart</td>
+<td></td>
+<td>21</td>
+<td>Testing.TestNG_Cart@6aef4fa</td></tr>
+<tr>
+<td title='Testing.TestNG_Coupons.T15_Black_tag_compare_test()'><b>T15_Black_tag_compare_test</b><br>Test class: Testing.TestNG_Coupons</td>
+<td></td>
+<td>1</td>
+<td>Testing.TestNG_Coupons@33b3c952</td></tr>
+<tr>
+<td title='Testing.TestNG_Cart.T05_Check_item_price_test()'><b>T05_Check_item_price_test</b><br>Test class: Testing.TestNG_Cart</td>
+<td></td>
+<td>8</td>
+<td>Testing.TestNG_Cart@6aef4fa</td></tr>
+<tr>
+<td title='Testing.TestNG_Categories.T23_Sort_and_filter_test()'><b>T23_Sort_and_filter_test</b><br>Test class: Testing.TestNG_Categories</td>
+<td></td>
+<td>10</td>
+<td>Testing.TestNG_Categories@3ec24eaa</td></tr>
+<tr>
+<td title='Testing.TestNG_Cart.T08_Add_remove_item_by_less_btn_test()'><b>T08_Add_remove_item_by_less_btn_test</b><br>Test class: Testing.TestNG_Cart</td>
+<td></td>
+<td>26</td>
+<td>Testing.TestNG_Cart@6aef4fa</td></tr>
+<tr>
+<td title='Testing.TestNG_Favorite_and_No_inventory.T26_Add_to_favorite_test()'><b>T26_Add_to_favorite_test</b><br>Test class: Testing.TestNG_Favorite_and_No_inventory</td>
+<td></td>
+<td>2</td>
+<td>Testing.TestNG_Favorite_and_No_inventory@68008cc8</td></tr>
+<tr>
+<td title='Testing.TestNG_Favorite_and_No_inventory.T27_Add_item_to_cart()'><b>T27_Add_item_to_cart</b><br>Test class: Testing.TestNG_Favorite_and_No_inventory</td>
+<td></td>
+<td>0</td>
+<td>Testing.TestNG_Favorite_and_No_inventory@68008cc8</td></tr>
+<tr>
+<td title='Testing.TestNG_RegisterAndLogin.T03_Registration_Email_test()'><b>T03_Registration_Email_test</b><br>Test class: Testing.TestNG_RegisterAndLogin</td>
+<td></td>
+<td>0</td>
+<td>Testing.TestNG_RegisterAndLogin@6b4eb215</td></tr>
+<tr>
+<td title='Testing.TestNG_Categories.T24_Add_filter_and_check_title_test()'><b>T24_Add_filter_and_check_title_test</b><br>Test class: Testing.TestNG_Categories</td>
+<td></td>
+<td>0</td>
+<td>Testing.TestNG_Categories@3ec24eaa</td></tr>
+<tr>
+<td title='Testing.TestNG_Links.T17_Navigation_to_item_page_test()'><b>T17_Navigation_to_item_page_test</b><br>Test class: Testing.TestNG_Links</td>
+<td></td>
+<td>22</td>
+<td>Testing.TestNG_Links@2edf197b</td></tr>
+<tr>
+<td title='Testing.TestNG_Links.T18_Search_item_via_category_submenu()'><b>T18_Search_item_via_category_submenu</b><br>Test class: Testing.TestNG_Links</td>
+<td></td>
+<td>6</td>
+<td>Testing.TestNG_Links@2edf197b</td></tr>
+<tr>
+<td title='Testing.TestNG_Links.T16_Navigation_to_item_page_when_item_out_of_stock_test()'><b>T16_Navigation_to_item_page_when_item_out_of_stock_test</b><br>Test class: Testing.TestNG_Links</td>
+<td></td>
+<td>22</td>
+<td>Testing.TestNG_Links@2edf197b</td></tr>
+<tr>
+<td title='Testing.TestNG_Items_and_Price_Compare.T20_Search_and_Filter_match_to_result_box_test()'><b>T20_Search_and_Filter_match_to_result_box_test</b><br>Test class: Testing.TestNG_Items_and_Price_Compare</td>
+<td></td>
+<td>15</td>
+<td>Testing.TestNG_Items_and_Price_Compare@e5715c3</td></tr>
+<tr>
+<td title='Testing.TestNG_Logo.T22_Logo_size_test()'><b>T22_Logo_size_test</b><br>Test class: Testing.TestNG_Logo</td>
+<td></td>
+<td>0</td>
+<td>Testing.TestNG_Logo@2303b402</td></tr>
+<tr>
+<td title='Testing.TestNG_Cart.T06_Check_item_price_updated_test()'><b>T06_Check_item_price_updated_test</b><br>Test class: Testing.TestNG_Cart</td>
+<td></td>
+<td>15</td>
+<td>Testing.TestNG_Cart@6aef4fa</td></tr>
+<tr>
+<td title='Testing.TestNG_RegisterAndLogin.T04_Login_Email_and_password_test()'><b>T04_Login_Email_and_password_test</b><br>Test class: Testing.TestNG_RegisterAndLogin</td>
+<td></td>
+<td>3</td>
+<td>Testing.TestNG_RegisterAndLogin@6b4eb215</td></tr>
+<tr>
+<td title='Testing.TestNG_Categories.T25_Compare_2_list_content_test()'><b>T25_Compare_2_list_content_test</b><br>Test class: Testing.TestNG_Categories</td>
+<td></td>
+<td>4</td>
+<td>Testing.TestNG_Categories@3ec24eaa</td></tr>
+</table><p>
+</body>
+</html>
