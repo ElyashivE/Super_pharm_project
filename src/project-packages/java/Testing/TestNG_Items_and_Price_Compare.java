@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -55,7 +56,8 @@ public class TestNG_Items_and_Price_Compare
     @Test
     public void T19_find_the_cheapest_item_test()
     {
-
+        try
+        {
             splitter = "~~";
             Functions.search_item("משחת שיניים מלבינה");
             String best_item = findCheapPrice();
@@ -63,20 +65,23 @@ public class TestNG_Items_and_Price_Compare
             String best_title = best[0];
             String best_price = best[1];
             Double actual_price = Double.parseDouble(best_price);
+            //מבוצעת המרה מ Double ל int ע"י עיגול המספר למס' int הקרוב ביותר בכדי שנוכל להשתמש בפונקציה קיימת ולא נצטרך ליצור חדשה
+            int actualPriceInt = (int)Math.round(actual_price);
             int expected_price = 28;
-            if (actual_price < expected_price)
-                Test19.pass(MarkupHelper.createLabel("test passed - the cheapest price is lower ",ExtentColor.GREEN));
-            else
-                Test19.fail("test failed - the cheapest price is higher");
+            String testDescription = "אנחנו מצפים למצוא פריט משחת שיניים זול יותר מ 28 שקלים";
+            boolean result = Functions.resultPrintInt(Test19,expected_price,actualPriceInt,0,testDescription);
             Test19.info("actual price is: " + actual_price);
             Test19.info("expected price is : " + expected_price);
             Test19.info("the title name is: " + best_title);
-        try
-        {
+            Assert.assertTrue(result);
+//            if (actual_price < expected_price)
+//                Test19.pass(MarkupHelper.createLabel("test passed - the cheapest price is lower ",ExtentColor.GREEN));
+//            else
+//                Test19.fail("test failed - the cheapest price is higher");
         }
         catch (Exception e)
         {
-            Test19.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test19, e);
         }
     }
     @Test
@@ -92,25 +97,31 @@ public class TestNG_Items_and_Price_Compare
             for (int i = 0; i < searchResultTitleList.size(); i++)
             {
                 String item_title = searchResultTitleList.get(i).getText();
-//                if (item_title.contains("ארנק עור"))
                 if (item_title.contains("עור") && item_title.contains("ארנק"))
                     count_titles++;
                 else
                     noMatchList.add(item_title);
             }
-            if (count_titles == searchResultTitleList.size())
-                Test20.pass(MarkupHelper.createLabel("test passed - all the result shows the exact content we searched",ExtentColor.GREEN));
-            else
-            {
-                Test20.fail(MarkupHelper.createLabel("test failed - the list below show the result with wrong content:",ExtentColor.RED));
-                Test20.fail(MarkupHelper.createUnorderedList(noMatchList));
-            }
-            Test20.info("search result count: "+searchResultTitleList.size());
-            Test20.info("matching titles count: "+count_titles);
+            String expectedResult = String.valueOf(searchResultTitleList.size());
+            String actualResult = String.valueOf(count_titles);
+            String testDescription = "אנחנו מצפים שכל הפריטים אחרי סינון לפי קטגוריה יכילו את המילים עור ו- ארנק";
+            boolean result = Functions.resultPrint(Test20,expectedResult,actualResult,testDescription);
+//            if (count_titles == searchResultTitleList.size())
+//                Test20.pass(MarkupHelper.createLabel("test passed - all the result shows the exact content we searched",ExtentColor.GREEN));
+//            else
+//            {
+//                Test20.fail(MarkupHelper.createLabel("test failed - the list below show the result with wrong content:",ExtentColor.RED));
+////                Test20.fail(MarkupHelper.createUnorderedList(noMatchList));
+//            }
+            if (noMatchList.size() != 0)
+                Test20.info(MarkupHelper.createUnorderedList(noMatchList));
+//            Test20.info("search result count: "+searchResultTitleList.size());
+//            Test20.info("matching titles count: "+count_titles);
+            Assert.assertTrue(result);
         }
         catch (Exception e)
         {
-            Test20.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test20, e);
         }
     }
     public static String findCheapPrice()

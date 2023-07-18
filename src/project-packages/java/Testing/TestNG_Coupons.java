@@ -8,6 +8,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -53,24 +54,30 @@ public class TestNG_Coupons
             int New = black_badge_count(New1,blackBadgeList);
             int Only = black_badge_count(Only1,blackBadgeList);
             int Unique = black_badge_count(Unique1,blackBadgeList);
-            if (New > Only)
-            {
-                if (New > Unique)
-                    Test15.pass("test passed - מופיע הכי הרבה " + New1);
-                else
-                    Test15.fail("test failed - מופיע הכי הרבה " + Unique1);
-            }
-            else if (Only > Unique)
-                Test15.fail("test failed - מופיע הכי הרבה " + Only1);
-            else
-                Test15.fail(MarkupHelper.createLabel("test failed - מופיע הכי הרבה " + Unique1, ExtentColor.RED));
+            String testDescription = "אנחנו מצפים שהתוצאות יכילו הכי הרבה תגית NEW";
+            boolean result = Functions.resultPrintInt(Test15,New,Only,Unique,testDescription);
             Test15.info(New1 + " count: "+New);
             Test15.info(Only1 + " count: "+Only);
             Test15.info(Unique1 + " count: "+Unique);
+            Assert.assertTrue(result);
+//            if (New > Only)
+//            {
+//                if (New > Unique)
+//                    Test15.pass("test passed - מופיע הכי הרבה " + New1);
+//                else
+//                    Test15.fail("test failed - מופיע הכי הרבה " + Unique1);
+//            }
+//            else if (Only > Unique)
+//                Test15.fail("test failed - מופיע הכי הרבה " + Only1);
+//            else
+//                Test15.fail(MarkupHelper.createLabel("test failed - מופיע הכי הרבה " + Unique1, ExtentColor.RED));
+//            Test15.info(New1 + " count: "+New);
+//            Test15.info(Only1 + " count: "+Only);
+//            Test15.info(Unique1 + " count: "+Unique);
         }
         catch (Exception e)
         {
-            Test15.fail("error!!! exception");
+            Functions.ex(Test15, e);
         }
     }
     public static int black_badge_count(String text,List<WebElement> blackBadgeList)

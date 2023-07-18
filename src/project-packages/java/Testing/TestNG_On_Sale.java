@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -72,21 +73,24 @@ public class TestNG_On_Sale
             addToCartViaContentWin.click();
             String actual_text = Functions.element(driver,item_content_error_msg).getAttribute("innerHTML").trim();
             String expected_text = "נא להוסיף מוצר נוסף למימוש המבצע";
-            if (actual_text.equals(expected_text))
-                Test10.pass(MarkupHelper.createLabel("test passed - we got error as expected", ExtentColor.GREEN));
-            else
-                Test10.fail("test failed - we didn't get error as expected");
-            Test10.info("actual result: "+actual_text);
-            Test10.info("expected result: "+expected_text);
+            String testDescription = "אנחנו מצפים לקבל הודעת שגיאה כאשר מנסים להוסיף מוצר לסל ללא בחירת כמות";
+            boolean result = Functions.resultPrint(Test10,expected_text,actual_text,testDescription);
+            Assert.assertTrue(result);
+//            if (actual_text.equals(expected_text))
+//                Test10.pass(MarkupHelper.createLabel("test passed - we got error as expected", ExtentColor.GREEN));
+//            else
+//                Test10.fail("test failed - we didn't get error as expected");
+//            Test10.info("actual result: "+actual_text);
+//            Test10.info("expected result: "+expected_text);
         }
         catch (Exception e)
         {
-            Test10.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test10, e);
         }
         driver.navigate().refresh();
     }
     @Test
-    public void T11_Add_item_to_cart_via_content_window_test() throws InterruptedException
+    public void T11_Add_item_to_cart_via_content_window_test()
     {
         try
         {
@@ -101,16 +105,19 @@ public class TestNG_On_Sale
             Functions.goToCartAndCloseAd();
             String actual_text = Functions.element(driver,item_amount_text).getText().trim();
             String expected_text = "2";
-            if (actual_text.equals(expected_text))
-                Test11.pass(MarkupHelper.createLabel("test passed - the compared amount are the same", ExtentColor.GREEN));
-            else
-                Test11.fail("test failed - the compared amount are odd");
-            Test11.info("actual result: "+actual_text);
-            Test11.info("expected result: "+expected_text);
+            String testDescription = "לאחר הוספת מוצר לסל דרך חלון תחולת מוצר אנו מצפים שהערך הכמותי יהיה שווה ל 2";
+            boolean result = Functions.resultPrint(Test11,expected_text,actual_text,testDescription);
+            Assert.assertTrue(result);
+//            if (actual_text.equals(expected_text))
+//                Test11.pass(MarkupHelper.createLabel("test passed - the compared amount are the same", ExtentColor.GREEN));
+//            else
+//                Test11.fail("test failed - the compared amount are odd");
+//            Test11.info("actual result: "+actual_text);
+//            Test11.info("expected result: "+expected_text);
         }
         catch (Exception e)
         {
-            Test11.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test11, e);
         }
         Functions.clear_cart(driver);
     }
@@ -139,17 +146,20 @@ public class TestNG_On_Sale
             double before = Double.parseDouble(price_before);
             double after = Double.parseDouble(price_after);
             double calc = (before - (before*(discount/100)));
-            if (String.format("%.1f",calc).equals(String.format("%.1f",after)))
-                Test12.pass(MarkupHelper.createLabel("test passed - the discount is ok", ExtentColor.GREEN));
-            else
-                Test12.fail("test failed - the discount is wrong");
+            String testDescription = "אנחנו מצפים מחיר חדש לאחר חישוב הנחה";
+            boolean result = Functions.resultPrint(Test12,String.format("%.1f",after),String.format("%.1f",calc),testDescription);
             Test12.info("values: discount- "+discount+ " old-price- "+before+" new-price- "+after);
-            Test12.info("actual result: "+ String.format("%.1f",calc));
-            Test12.info("expected result: "+ String.format("%.1f",after));
+            Assert.assertTrue(result);
+//            if (String.format("%.1f",calc).equals(String.format("%.1f",after)))
+//                Test12.pass(MarkupHelper.createLabel("test passed - the discount is ok", ExtentColor.GREEN));
+//            else
+//                Test12.fail("test failed - the discount is wrong");
+//            Test12.info("actual result: "+ String.format("%.1f",calc));
+//            Test12.info("expected result: "+ String.format("%.1f",after));
         }
         catch (Exception e)
         {
-            Test12.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test12, e);
         }
         Functions.clear_cart(driver);
     }

@@ -9,6 +9,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -65,27 +66,36 @@ public class TestNG_Join_lifestyle
             String myInput = "abcde";
             String expectedResult = "";
             String actualResult = sendKeysAndGetValueBack(myInput,ID_number);
-            if(actualResult.equals(expectedResult))
-                Test28.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
-            else
-                Test28.fail("test failed");
+            actualResult = sendKeysAndGetValueBack(myInput,ID_number);
+            String testDescription = "אנחנו מצפים לקבל רק מספרים בשדה ת.ז. אפילו שמכניסים רק אותיות";
+            boolean result = Functions.resultPrint(Test28,expectedResult,actualResult,testDescription);
             Test28.info("input string: "+myInput);
-            Test28.info("actual result: "+actualResult);
-            Test28.info("expected result: "+expectedResult);
+            Assert.assertTrue(result);
+//            if(actualResult.equals(expectedResult))
+//                Test28.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
+//            else
+//                Test28.fail("test failed");
+//            Test28.info("input string: "+myInput);
+//            Test28.info("actual result: "+actualResult);
+//            Test28.info("expected result: "+expectedResult);
             myInput = "123a";
             expectedResult = "123";
             actualResult = sendKeysAndGetValueBack(myInput,ID_number);
-            if(actualResult.equals(expectedResult))
-                Test28.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
-            else
-                Test28.fail("test failed");
+            testDescription = "אנחנו מצפים לקבל רק מספרים בשדה ת.ז. אפילו שמכניסים אותיות ומספרים";
+            result = Functions.resultPrint(Test28,expectedResult,actualResult,testDescription);
             Test28.info("input string: "+myInput);
-            Test28.info("actual result: "+actualResult);
-            Test28.info("expected result: "+expectedResult);
+            Assert.assertTrue(result);
+//            if(actualResult.equals(expectedResult))
+//                Test28.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
+//            else
+//                Test28.fail("test failed");
+//            Test28.info("input string: "+myInput);
+//            Test28.info("actual result: "+actualResult);
+//            Test28.info("expected result: "+expectedResult);
         }
         catch (Exception e)
         {
-            Test28.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test29, e);
         }
     }
     @Test(priority = 2,dependsOnMethods = "T28_ID_field")
@@ -96,27 +106,35 @@ public class TestNG_Join_lifestyle
             String myInput = "123456";
             String expectedResult = "הטלפון שהוזן אינו תקין";
             String actualResult = sendKeysAndGetErrorBack(myInput,phone_number,phone_error);
-            if(actualResult.equals(expectedResult))
-                Test29.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
-            else
-                Test29.fail("test failed");
+            String testDescription = "אנחנו מצפים לקבל שגיאה כאשר מוזן מספר טלפון המכיל 6 ספרות במקום 7";
+            boolean result = Functions.resultPrint(Test29,expectedResult,actualResult,testDescription);
             Test29.info("input string: "+myInput);
-            Test29.info("actual result: "+actualResult);
-            Test29.info("expected result: "+expectedResult);
+            Assert.assertTrue(result);
+//            if(actualResult.equals(expectedResult))
+//                Test29.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
+//            else
+//                Test29.fail("test failed");
+//            Test29.info("input string: "+myInput);
+//            Test29.info("actual result: "+actualResult);
+//            Test29.info("expected result: "+expectedResult);
             myInput = "1234567";
             expectedResult = "";
             actualResult = sendKeysAndGetErrorBack(myInput,phone_number,phone_error);
-            if(actualResult.equals(expectedResult))
-                Test29.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
-            else
-                Test29.fail("test failed");
+            testDescription = "אנחנו מצפים שהשגיאה תעלם כאשר מכניסים מספר טלפון תקין המכיל 7 ספרות";
+            result = Functions.resultPrint(Test29,expectedResult,actualResult,testDescription);
             Test29.info("input string: "+myInput);
-            Test29.info("actual result: "+actualResult);
-            Test29.info("expected result: "+expectedResult);
+            Assert.assertTrue(result);
+//            if(actualResult.equals(expectedResult))
+//                Test29.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
+//            else
+//                Test29.fail("test failed");
+//            Test29.info("input string: "+myInput);
+//            Test29.info("actual result: "+actualResult);
+//            Test29.info("expected result: "+expectedResult);
         }
         catch (Exception e)
         {
-            Test29.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test29, e);
         }
     }
     @Test(priority = 3,dependsOnMethods = "T28_ID_field")
@@ -127,36 +145,48 @@ public class TestNG_Join_lifestyle
             String myInput = "123456";
             String expectedResult = "רק אותיות בעברית, בבקשה";
             String actualResult = sendKeysAndGetErrorBack(myInput,first_name,first_name_error);
-            if(actualResult.equals(expectedResult))
-                Test30.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
-            else
-                Test30.fail("test failed");
+            String testDescription = "אנחנו מצפים לקבל רק שגיאה כאשר מכניסים מספרים בשדה שם פרטי המקבל רק אותיות";
+            boolean result = Functions.resultPrint(Test30,expectedResult,actualResult,testDescription);
             Test30.info("input string: "+myInput);
-            Test30.info("actual result: "+actualResult);
-            Test30.info("expected result: "+expectedResult);
+            Assert.assertTrue(result);
+//            if(actualResult.equals(expectedResult))
+//                Test30.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
+//            else
+//                Test30.fail("test failed");
+//            Test30.info("input string: "+myInput);
+//            Test30.info("actual result: "+actualResult);
+//            Test30.info("expected result: "+expectedResult);
             myInput = "abcde";
             actualResult = sendKeysAndGetErrorBack(myInput,first_name,first_name_error);
-            if(actualResult.equals(expectedResult))
-                Test30.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
-            else
-                Test30.fail("test failed");
+            testDescription = "אנחנו מצפים לקבל שגיאה כאשר מכניסים אותיות באנגלית בשדה שם פרטי המקבל רק אותיות בעברית";
+            result = Functions.resultPrint(Test30,expectedResult,actualResult,testDescription);
             Test30.info("input string: "+myInput);
-            Test30.info("actual result: "+actualResult);
-            Test30.info("expected result: "+expectedResult);
+            Assert.assertTrue(result);
+//            if(actualResult.equals(expectedResult))
+//                Test30.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
+//            else
+//                Test30.fail("test failed");
+//            Test30.info("input string: "+myInput);
+//            Test30.info("actual result: "+actualResult);
+//            Test30.info("expected result: "+expectedResult);
             myInput = "ישראל";
             expectedResult = "";
             actualResult = sendKeysAndGetErrorBack(myInput,first_name,first_name_error);
-            if(actualResult.equals(expectedResult))
-                Test30.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
-            else
-                Test30.fail("test failed");
+            testDescription = "אנחנו מצפים שהשגיאה תעלם כאשר מכניסים אותיות בעברית בלבד בשדה שם פרטי";
+            result = Functions.resultPrint(Test30,expectedResult,actualResult,testDescription);
             Test30.info("input string: "+myInput);
-            Test30.info("actual result: "+actualResult);
-            Test30.info("expected result: "+expectedResult);
+            Assert.assertTrue(result);
+//            if(actualResult.equals(expectedResult))
+//                Test30.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
+//            else
+//                Test30.fail("test failed");
+//            Test30.info("input string: "+myInput);
+//            Test30.info("actual result: "+actualResult);
+//            Test30.info("expected result: "+expectedResult);
         }
         catch (Exception e)
         {
-            Test30.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test30, e);
         }
     }
     public static void getToSignUpForm()

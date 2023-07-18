@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -76,18 +77,15 @@ public class TestNG_RegisterAndLogin
             rFirstName.sendKeys("123");
             String actualText = getErrorMsg();
             String expectedText = "נא להזין שם תקין";
-            if (actualText.equals(expectedText))
-                Test01.pass(MarkupHelper.createLabel("test passed - we got error as expected", ExtentColor.GREEN));
-            else
-                Test01.fail("test failed - we didn't get error as expected");
-            Test01.info("actual error: "+actualText);
-            Test01.info("expected error: "+expectedText);
+            String testDescription = "אנחנו מצפים לקבל הודעת שגיאה כאשר מזינים בשדה מספרים";
+            boolean result = Functions.resultPrint(Test01,expectedText,actualText,testDescription);
+            Assert.assertTrue(result);
             rFirstName.clear();
             rFirstName.sendKeys("a");
         }
         catch (Exception e)
         {
-            Test01.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test01, e);
         }
     }
     @Test
@@ -99,18 +97,15 @@ public class TestNG_RegisterAndLogin
             rLastName.sendKeys("123");
             String actualText = getErrorMsg();
             String expectedText = "נא להזין שם תקין";
-            if (actualText.equals(expectedText))
-                Test02.pass(MarkupHelper.createLabel("test passed - we got error as expected", ExtentColor.GREEN));
-            else
-                Test02.fail("test failed - we didn't get error as expected");
-            Test02.info("actual error: "+actualText);
-            Test02.info("expected error: "+expectedText);
+            String testDescription = "אנחנו מצפים לקבל הודעת שגיאה כאשר מזינים בשדה מספרים";
+            boolean result = Functions.resultPrint(Test02,expectedText,actualText,testDescription);
+            Assert.assertTrue(result);
             rLastName.clear();
             rLastName.sendKeys("a");
         }
         catch (Exception e)
         {
-            Test02.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test02, e);
         }
     }
     @Test
@@ -122,17 +117,14 @@ public class TestNG_RegisterAndLogin
             rMail.sendKeys("e@@e.gmail.com");
             String actualText = getErrorMsg();
             String expectedText = "נא להזין כתובת דוא\"ל תקינה";
-            if (actualText.equals(expectedText))
-                Test03.pass(MarkupHelper.createLabel("test passed - we got error as expected", ExtentColor.GREEN));
-            else
-                Test03.fail("test failed - we didn't get error as expected");
-            Test03.info("actual error: "+actualText);
-            Test03.info("expected error: "+expectedText);
+            String testDescription = "אנחנו מצפים לקבל הודעת שגיאה כאשר מזינים בשדה @ כפול";
+            boolean result = Functions.resultPrint(Test03,expectedText,actualText,testDescription);
+            Assert.assertTrue(result);
             driver.navigate().refresh();
         }
         catch (Exception e)
         {
-            Test03.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test03, e);
         }
     }
     @Test
@@ -146,23 +138,19 @@ public class TestNG_RegisterAndLogin
             Functions.element(driver, login_password).click();
             Functions.element(driver, login_mail).click();
             Functions.waitByVisibility(login_password);
-//            wait.until(ExpectedConditions.visibilityOfElementLocated(login_password));
             List<WebElement> list = Functions.elementList(driver,err_list);
             String expectedText = "נא למלא שדה זה";
             for (int i = 0; i < list.size(); i++)
             {
                 String actualText = list.get(i).getText().trim();
-                if(actualText.equals(expectedText))
-                    Test04.pass(MarkupHelper.createLabel("test passed - we got error as expected", ExtentColor.GREEN));
-                else
-                    Test04.fail("test failed - we didn't get error as expected");
-                Test04.info("actual error: "+actualText);
-                Test04.info("expected error: "+expectedText);
+                String testDescription = "אנחנו מצפים לקבל הודעת שגיאה עבור שדות מייל וסיסמא כאשר לא מוזן בשדה כלום";
+                boolean result = Functions.resultPrint(Test04,expectedText,actualText,testDescription);
+                Assert.assertTrue(result);
             }
         }
         catch (Exception e)
         {
-            Test04.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test04, e);
         }
     }
 

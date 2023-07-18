@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -39,7 +40,6 @@ public class TestNG_Cart
     static ExtentTest Test07;
     static ExtentTest Test08;
     static ExtentTest Test09;
-
 
 //----------------------------------------------------------
 
@@ -83,17 +83,13 @@ public class TestNG_Cart
             Functions.waitByVisibility(cart_total_price);
             WebElement cartTotalPrice = Functions.element(driver,cart_total_price);
             String cartTotalPriceSt = cartTotalPrice.getText();
-            if (cartTotalPriceSt.equals(totalPriceSt))
-                Test05.pass(MarkupHelper.createLabel("test passed - the compared prices are the same", ExtentColor.GREEN));
-            else
-                Test05.fail("test failed - the compared prices are odd");
-            Test05.info("the compared price before cart is: "+totalPriceSt);
-            Test05.info("the compared price after cart is: "+cartTotalPriceSt);
-
+            String testDescription = "אנחנו משווים מחיר של מוצר לפני ואחרי הוספתו לסל שהוא זהה";
+            boolean result = Functions.resultPrint(Test05,cartTotalPriceSt,totalPriceSt,testDescription);
+            Assert.assertTrue(result);
         }
         catch (Exception e)
         {
-            Test05.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test05, e);
         }
         Functions.clear_cart(driver);
     }
@@ -114,16 +110,15 @@ public class TestNG_Cart
             Functions.waitByTextToBe(item_amount_text,"2");
             String price = Functions.element(driver,item_price_per_unit).getText();
             String amount_text = Functions.element(driver,item_amount_text).getText();
-            Double result = price_calc(amount_text,price);
-            if(result == Double.parseDouble(Functions.element(driver,cart_total_price).getText()))
-                Test06.pass(MarkupHelper.createLabel("test passed - the compared prices are the same", ExtentColor.GREEN));
-            else
-                Test06.fail("test failed - the compared prices are the odd");
-            Test06.info("the compared prices are: "+result+" | "+Functions.element(driver,cart_total_price).getText());
+            String Result = price_calc(amount_text,price);
+            String cartTotalPrice = Functions.element(driver,cart_total_price).getText();
+            String testDescription = "אנחנו בודקים את המחיר הסופי לאחר עדכון כמות ל 2 במקום 1";
+            boolean result = Functions.resultPrint(Test06,Result,cartTotalPrice,testDescription);
+            Assert.assertTrue(result);
         }
         catch (Exception e)
         {
-            Test06.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test06, e);
         }
     }
     @Test(priority = 3, dependsOnMethods = "T06_Check_item_price_updated_test")
@@ -137,17 +132,15 @@ public class TestNG_Cart
             {
                 items_amount_sum = Integer.parseInt(list.get(i).getText());
             }
-            int Cart_float_num = Integer.parseInt(Functions.element(driver,cart_float_num).getText());
-            if(Cart_float_num == items_amount_sum)
-                Test07.pass(MarkupHelper.createLabel("test passed - the compared numbers are the same", ExtentColor.GREEN));
-            else
-                Test07.fail("test failed - the compared numbers are the odd");
-            Test07.info("cart float num is: "+Cart_float_num);
-            Test07.info("sum of items amount is: "+items_amount_sum);
+            String floatNum = Functions.element(driver,cart_float_num).getText();
+            String itemsAmountSum = String.valueOf(items_amount_sum);
+            String testDescription = "אנחנו משווים בין הערך המס' בעגלה לבין הכמות הנצברת בעגלה";
+            boolean result = Functions.resultPrint(Test07,floatNum,itemsAmountSum,testDescription);
+            Assert.assertTrue(result);
         }
         catch (Exception e)
         {
-            Test07.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test07, e);
         }
         Functions.clear_cart(driver);
     }
@@ -166,15 +159,13 @@ public class TestNG_Cart
             lessBtn.click();
             Functions.waitByVisibility(Functions.empty_cart);
             String Empty_cart = Functions.element(driver,Functions.empty_cart).getText();
-            if(Empty_cart.equals("סל הקניות שלך ריק"))
-                Test08.pass(MarkupHelper.createLabel("test passed - item removed from cart", ExtentColor.GREEN));
-            else
-                Test08.fail("test failed - item didn't removed from cart");
-            Test08.info("empty cart text is: "+Empty_cart);
+            String testDescription = "אנחנו מוודאים קבלת טקסט עגלה ריקה לאחר הסרה של הפריטים";
+            boolean result = Functions.resultPrint(Test08,"סל הקניות שלך ריק",Empty_cart,testDescription);
+            Assert.assertTrue(result);
         }
         catch (Exception e)
         {
-            Test08.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test08, e);
         }
     }
     @Test(priority = 5)
@@ -190,21 +181,21 @@ public class TestNG_Cart
             Functions.clear_cart(driver);
             Functions.waitByVisibility(Functions.empty_cart);
             String Empty_cart = Functions.element(driver,Functions.empty_cart).getText();
-            if(Empty_cart.equals("סל הקניות שלך ריק"))
-                Test09.pass(MarkupHelper.createLabel("test passed - item removed from cart", ExtentColor.GREEN));
-            else
-                Test09.fail("test failed - item didn't removed from cart");
-            Test09.info("empty cart text is: "+Empty_cart);
+            String testDescription = "אנחנו מוודאים קבלת טקסט עגלה ריקה לאחר הסרה של הפריטים";
+            boolean result = Functions.resultPrint(Test09,"סל הקניות שלך ריק",Empty_cart,testDescription);
+            Assert.assertTrue(result);
         }
         catch (Exception e)
         {
-            Test09.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test09, e);
         }
     }
-    public static Double price_calc(String amount_text,String price)
+    public static String price_calc(String amount_text,String price)
     {
         double Price = Double.parseDouble(price);
         double Amount_text = Double.parseDouble(amount_text);
-        return Amount_text*Price;
+        Price = Amount_text*Price;
+        String SPrice = String.valueOf(Price);
+        return SPrice+"0";
     }
 }

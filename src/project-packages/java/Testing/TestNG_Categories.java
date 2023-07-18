@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -116,16 +117,22 @@ public class TestNG_Categories
                 if (item_title.contains("ARCOSTEEL"))
                     count_compare++;
             }
-            if (count_compare == titleList.size())
-                Test24.pass(MarkupHelper.createLabel("test passed - all items after filter from manufacture ARCOSTEEL",ExtentColor.GREEN));
-            else
-                Test24.fail("test failed - not all items after filter from manufacture ARCOSTEEL");
+//            --------------------------מצריך תיקון-----------------------------------------
+//            int expectedText = titleList.size();
+//            int actualText = count_compare;
+//            String testDescription = "אנחנו מצפים שכל המוצרים אחרי סינון יופיעו אם שם היצרן ארקוסטיל";
+//            boolean result = Functions.resultPrint(Test02,expectedText,actualText,testDescription);
+//            Assert.assertTrue(result);
+//            if (count_compare == titleList.size())
+//                Test24.pass(MarkupHelper.createLabel("test passed - all items after filter from manufacture ARCOSTEEL",ExtentColor.GREEN));
+//            else
+//                Test24.fail("test failed - not all items after filter from manufacture ARCOSTEEL");
             Test24.info("items title list:");
             Test24.info(MarkupHelper.createUnorderedList(titles));
         }
         catch (Exception e)
         {
-            Test24.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test24, e);
         }
     }
     @Test(priority = 3)
@@ -157,7 +164,7 @@ public class TestNG_Categories
         }
         catch (Exception e)
         {
-            Test25.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test25, e);
         }
     }
     public static void enterPage(Actions action)

@@ -4,17 +4,13 @@ import Assists.ExtentManager;
 import Assists.Functions;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
 import java.util.List;
 
 import static Testing.TestNG_RegisterAndLogin.driver;
@@ -58,22 +54,25 @@ public class TestNG_Favorite_and_No_inventory
             Functions.search_item("נביעות");
             WebElement addToFavorite = Functions.element(driver,add_favorite_btn);
             addToFavorite.click();
-            Functions.waitByPresenceOfElementLoc(pop_up_error_text);
-            String actual_result = Functions.element(driver,pop_up_error_text).getText();
-            String expected_result = "הוספה למועדפים נכשלה";
+            Functions.waitByVisibility(pop_up_error_text);
+            String actualText = Functions.element(driver,pop_up_error_text).getText();
+            String expectedText = "הוספה למועדפים נכשלה";
             WebElement closePopUp = Functions.element(driver,close_pop_up_btn);
             closePopUp.click();
-            if(actual_result.equals(expected_result))
-                Test26.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
-            else
-                Test26.fail(MarkupHelper.createLabel("test failed",ExtentColor.RED));
-            Test26.info("actual result is: "+actual_result);
-            Test26.info("expected result is: "+expected_result);
-            Test26.info("we expecting for an error because we cant add without user login to system");
+            String testDescription = "אנחנו מצפים לקבל הודעת שגיאה כאשר מנסים להוסיף למועדפים כאשר איננו מחוברים עם יוזר לאתר";
+            boolean result = Functions.resultPrint(Test26,expectedText,actualText,testDescription);
+            Assert.assertTrue(result);
+//            if(actual_result.equals(expected_result))
+//                Test26.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
+//            else
+//                Test26.fail(MarkupHelper.createLabel("test failed",ExtentColor.RED));
+//            Test26.info("actual result is: "+actual_result);
+//            Test26.info("expected result is: "+expected_result);
+//            Test26.info("we expecting for an error because we cant add without user login to system");
         }
         catch (Exception e)
         {
-            Test26.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test26, e);
         }
     }
     @Test(priority = 2,dependsOnMethods = "T26_Add_to_favorite_test")
@@ -91,16 +90,21 @@ public class TestNG_Favorite_and_No_inventory
                     list.get(i).click();
             }
             String after_click_cart_num = Functions.element(driver,cart_number).getAttribute("innerHTML");
-            if (cart_num.equals(after_click_cart_num))
-                Test27.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
-            else
-                Test27.fail(MarkupHelper.createLabel("test failed",ExtentColor.RED));
-            Test27.info("cart num before click is: "+cart_num);
-            Test27.info("cart num after click is: "+after_click_cart_num);
+            String expectedText = cart_num;
+            String actualText = after_click_cart_num;
+            String testDescription = "אנחנו מצפים שכמות הפריטים בסל לא תשתנה לאחר לחיצה על לחצן הוספה של פריט לא במלאי";
+            boolean result = Functions.resultPrint(Test27,expectedText,actualText,testDescription);
+            Assert.assertTrue(result);
+//            if (cart_num.equals(after_click_cart_num))
+//                Test27.pass(MarkupHelper.createLabel("test passed",ExtentColor.GREEN));
+//            else
+//                Test27.fail(MarkupHelper.createLabel("test failed",ExtentColor.RED));
+//            Test27.info("cart num before click is: "+cart_num);
+//            Test27.info("cart num after click is: "+after_click_cart_num);
         }
         catch (Exception e)
         {
-            Test27.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test27, e);
         }
     }
 }

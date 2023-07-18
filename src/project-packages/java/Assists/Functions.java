@@ -1,6 +1,8 @@
 package Assists;
 
-
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -137,5 +139,41 @@ public class Functions
     {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
         wait.until(ExpectedConditions.stalenessOf(Functions.element(driver,by)));
+    }
+    public static boolean resultPrint(ExtentTest testNum,String expectedResult, String actualResult,String testDescription)
+    {
+        boolean isEqual = actualResult.equals(expectedResult);
+        if(isEqual)
+            testNum.pass(MarkupHelper.createLabel("test passed - "+testDescription, ExtentColor.GREEN));
+        else
+            testNum.fail(MarkupHelper.createLabel("test failed - "+testDescription,ExtentColor.RED));
+        testNum.info("Actual Result: "+actualResult);
+        testNum.info("Expected Result: "+expectedResult);
+        return isEqual;
+    }
+    public static boolean resultPrintInt(ExtentTest testNum,int value1Bigger, int value2, int value3, String testDescription)
+    {
+        boolean isBigger = (value1Bigger > value2) && (value1Bigger > value3);
+        if((value1Bigger > value2) && (value1Bigger > value3))
+            testNum.pass(MarkupHelper.createLabel("test passed - "+testDescription, ExtentColor.GREEN));
+        else
+            testNum.fail(MarkupHelper.createLabel("test failed - "+testDescription,ExtentColor.RED));
+        return isBigger;
+    }
+    public static boolean resultPrintNotEqual(ExtentTest testNum,String expectedResult, String actualResult,String testDescription)
+    {
+        boolean isEqual = !actualResult.equals(expectedResult);
+        if (isEqual)
+            testNum.pass(MarkupHelper.createLabel("test passed - " + testDescription, ExtentColor.GREEN));
+        else
+            testNum.fail(MarkupHelper.createLabel("test failed - " + testDescription, ExtentColor.RED));
+        testNum.info("Actual Result: " + actualResult);
+        testNum.info("Expected Result: " + expectedResult);
+        return isEqual;
+    }
+    public static void ex(ExtentTest testNum, Exception e)
+    {
+        testNum.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+        testNum.fail(e);
     }
 }

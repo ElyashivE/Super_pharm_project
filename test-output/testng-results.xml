@@ -1,241 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="30" passed="30" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-29T12:15:58 IDT" name="anyName" finished-at="2023-04-29T12:21:41 IDT" duration-ms="343822">
+  <suite started-at="2023-05-03T22:17:05 IDT" name="Command line suite" finished-at="2023-05-03T22:19:33 IDT" duration-ms="148437">
     <groups>
     </groups>
-    <test started-at="2023-04-29T12:15:58 IDT" name="SuperPharmProject" finished-at="2023-04-29T12:21:41 IDT" duration-ms="343822">
-      <class name="Testing.TestNG_Categories">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Categories@3ec24eaa]" started-at="2023-04-29T12:21:04 IDT" name="BeforeClass" finished-at="2023-04-29T12:21:08 IDT" duration-ms="4435" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T23_Sort_and_filter_test()[pri:1, instance:Testing.TestNG_Categories@3ec24eaa]" started-at="2023-04-29T12:21:08 IDT" name="T23_Sort_and_filter_test" finished-at="2023-04-29T12:21:19 IDT" duration-ms="10349" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T23_Sort_and_filter_test -->
-        <test-method signature="T24_Add_filter_and_check_title_test()[pri:2, instance:Testing.TestNG_Categories@3ec24eaa]" started-at="2023-04-29T12:21:19 IDT" name="T24_Add_filter_and_check_title_test" finished-at="2023-04-29T12:21:19 IDT" depends-on-methods="Testing.TestNG_Categories.T23_Sort_and_filter_test" duration-ms="642" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T24_Add_filter_and_check_title_test -->
-        <test-method signature="T25_Compare_2_list_content_test()[pri:3, instance:Testing.TestNG_Categories@3ec24eaa]" started-at="2023-04-29T12:21:19 IDT" name="T25_Compare_2_list_content_test" finished-at="2023-04-29T12:21:23 IDT" duration-ms="4217" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T25_Compare_2_list_content_test -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Categories@3ec24eaa]" started-at="2023-04-29T12:21:23 IDT" name="AfterClass" finished-at="2023-04-29T12:21:24 IDT" duration-ms="139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_Categories -->
-      <class name="Testing.TestNG_Join_lifestyle">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Join_lifestyle@5e4f7506]" started-at="2023-04-29T12:21:31 IDT" name="BeforeClass" finished-at="2023-04-29T12:21:35 IDT" duration-ms="3934" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T28_ID_field()[pri:1, instance:Testing.TestNG_Join_lifestyle@5e4f7506]" started-at="2023-04-29T12:21:35 IDT" name="T28_ID_field" finished-at="2023-04-29T12:21:41 IDT" duration-ms="5971" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T28_ID_field -->
-        <test-method signature="T29_Phone_field()[pri:2, instance:Testing.TestNG_Join_lifestyle@5e4f7506]" started-at="2023-04-29T12:21:41 IDT" name="T29_Phone_field" finished-at="2023-04-29T12:21:41 IDT" depends-on-methods="Testing.TestNG_Join_lifestyle.T28_ID_field" duration-ms="251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T29_Phone_field -->
-        <test-method signature="T30_First_name_field()[pri:3, instance:Testing.TestNG_Join_lifestyle@5e4f7506]" started-at="2023-04-29T12:21:41 IDT" name="T30_First_name_field" finished-at="2023-04-29T12:21:41 IDT" depends-on-methods="Testing.TestNG_Join_lifestyle.T28_ID_field" duration-ms="240" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T30_First_name_field -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Join_lifestyle@5e4f7506]" started-at="2023-04-29T12:21:41 IDT" name="AfterClass" finished-at="2023-04-29T12:21:41 IDT" duration-ms="120" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_Join_lifestyle -->
-      <class name="Testing.TestNG_Logo">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Logo@2303b402]" started-at="2023-04-29T12:20:40 IDT" name="BeforeClass" finished-at="2023-04-29T12:20:44 IDT" duration-ms="4700" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T21_Logo_home_page_test()[pri:0, instance:Testing.TestNG_Logo@2303b402]" started-at="2023-04-29T12:20:44 IDT" name="T21_Logo_home_page_test" finished-at="2023-04-29T12:21:04 IDT" duration-ms="19028" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T21_Logo_home_page_test -->
-        <test-method signature="T22_Logo_size_test()[pri:0, instance:Testing.TestNG_Logo@2303b402]" started-at="2023-04-29T12:21:04 IDT" name="T22_Logo_size_test" finished-at="2023-04-29T12:21:04 IDT" duration-ms="122" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T22_Logo_size_test -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Logo@2303b402]" started-at="2023-04-29T12:21:04 IDT" name="AfterClass" finished-at="2023-04-29T12:21:04 IDT" duration-ms="130" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_Logo -->
-      <class name="Testing.TestNG_Items_and_Price_Compare">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Items_and_Price_Compare@e5715c3]" started-at="2023-04-29T12:20:16 IDT" name="BeforeClass" finished-at="2023-04-29T12:20:21 IDT" duration-ms="4391" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T19_find_the_cheapest_item_test()[pri:0, instance:Testing.TestNG_Items_and_Price_Compare@e5715c3]" started-at="2023-04-29T12:20:21 IDT" name="T19_find_the_cheapest_item_test" finished-at="2023-04-29T12:20:24 IDT" duration-ms="2935" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T19_find_the_cheapest_item_test -->
-        <test-method signature="T20_Search_and_Filter_match_to_result_box_test()[pri:0, instance:Testing.TestNG_Items_and_Price_Compare@e5715c3]" started-at="2023-04-29T12:20:24 IDT" name="T20_Search_and_Filter_match_to_result_box_test" finished-at="2023-04-29T12:20:40 IDT" duration-ms="15991" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T20_Search_and_Filter_match_to_result_box_test -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Items_and_Price_Compare@e5715c3]" started-at="2023-04-29T12:20:40 IDT" name="AfterClass" finished-at="2023-04-29T12:20:40 IDT" duration-ms="138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_Items_and_Price_Compare -->
-      <class name="Testing.TestNG_RegisterAndLogin">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_RegisterAndLogin@6b4eb215]" started-at="2023-04-29T12:15:58 IDT" name="BeforeClass" finished-at="2023-04-29T12:16:03 IDT" duration-ms="5187" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T01_Registration_first_name_test()[pri:0, instance:Testing.TestNG_RegisterAndLogin@6b4eb215]" started-at="2023-04-29T12:16:03 IDT" name="T01_Registration_first_name_test" finished-at="2023-04-29T12:16:04 IDT" duration-ms="839" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T01_Registration_first_name_test -->
-        <test-method signature="T02_Registration_last_name_test()[pri:0, instance:Testing.TestNG_RegisterAndLogin@6b4eb215]" started-at="2023-04-29T12:16:04 IDT" name="T02_Registration_last_name_test" finished-at="2023-04-29T12:16:04 IDT" duration-ms="650" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T02_Registration_last_name_test -->
-        <test-method signature="T03_Registration_Email_test()[pri:0, instance:Testing.TestNG_RegisterAndLogin@6b4eb215]" started-at="2023-04-29T12:16:04 IDT" name="T03_Registration_Email_test" finished-at="2023-04-29T12:16:05 IDT" duration-ms="625" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T03_Registration_Email_test -->
-        <test-method signature="T04_Login_Email_and_password_test()[pri:0, instance:Testing.TestNG_RegisterAndLogin@6b4eb215]" started-at="2023-04-29T12:16:05 IDT" name="T04_Login_Email_and_password_test" finished-at="2023-04-29T12:16:08 IDT" duration-ms="3514" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T04_Login_Email_and_password_test -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_RegisterAndLogin@6b4eb215]" started-at="2023-04-29T12:16:08 IDT" name="AfterClass" finished-at="2023-04-29T12:16:09 IDT" duration-ms="289" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_RegisterAndLogin -->
-      <class name="Testing.TestNG_Coupons">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Coupons@33b3c952]" started-at="2023-04-29T12:19:15 IDT" name="BeforeClass" finished-at="2023-04-29T12:19:18 IDT" duration-ms="3678" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T15_Black_tag_compare_test()[pri:0, instance:Testing.TestNG_Coupons@33b3c952]" started-at="2023-04-29T12:19:18 IDT" name="T15_Black_tag_compare_test" finished-at="2023-04-29T12:19:20 IDT" duration-ms="1957" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T15_Black_tag_compare_test -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Coupons@33b3c952]" started-at="2023-04-29T12:19:20 IDT" name="AfterClass" finished-at="2023-04-29T12:19:20 IDT" duration-ms="125" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_Coupons -->
-      <class name="Testing.TestNG_Favorite_and_No_inventory">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Favorite_and_No_inventory@68008cc8]" started-at="2023-04-29T12:21:24 IDT" name="BeforeClass" finished-at="2023-04-29T12:21:28 IDT" duration-ms="4655" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T26_Add_to_favorite_test()[pri:1, instance:Testing.TestNG_Favorite_and_No_inventory@68008cc8]" started-at="2023-04-29T12:21:28 IDT" name="T26_Add_to_favorite_test" finished-at="2023-04-29T12:21:31 IDT" duration-ms="2551" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T26_Add_to_favorite_test -->
-        <test-method signature="T27_Add_item_to_cart()[pri:2, instance:Testing.TestNG_Favorite_and_No_inventory@68008cc8]" started-at="2023-04-29T12:21:31 IDT" name="T27_Add_item_to_cart" finished-at="2023-04-29T12:21:31 IDT" depends-on-methods="Testing.TestNG_Favorite_and_No_inventory.T26_Add_to_favorite_test" duration-ms="65" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T27_Add_item_to_cart -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Favorite_and_No_inventory@68008cc8]" started-at="2023-04-29T12:21:31 IDT" name="AfterClass" finished-at="2023-04-29T12:21:31 IDT" duration-ms="119" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_Favorite_and_No_inventory -->
-      <class name="Testing.TestNG_On_Sale">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_On_Sale@7ce21353]" started-at="2023-04-29T12:18:18 IDT" name="BeforeClass" finished-at="2023-04-29T12:18:20 IDT" duration-ms="2783" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T10_Item_content_error_test()[pri:0, instance:Testing.TestNG_On_Sale@7ce21353]" started-at="2023-04-29T12:18:20 IDT" name="T10_Item_content_error_test" finished-at="2023-04-29T12:18:22 IDT" duration-ms="1184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T10_Item_content_error_test -->
-        <test-method signature="T11_Add_item_to_cart_via_content_window_test()[pri:0, instance:Testing.TestNG_On_Sale@7ce21353]" started-at="2023-04-29T12:18:22 IDT" name="T11_Add_item_to_cart_via_content_window_test" finished-at="2023-04-29T12:18:27 IDT" duration-ms="5603" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T11_Add_item_to_cart_via_content_window_test -->
-        <test-method signature="T12_Discount_check_test()[pri:0, instance:Testing.TestNG_On_Sale@7ce21353]" started-at="2023-04-29T12:18:27 IDT" name="T12_Discount_check_test" finished-at="2023-04-29T12:19:03 IDT" duration-ms="36198" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T12_Discount_check_test -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_On_Sale@7ce21353]" started-at="2023-04-29T12:19:03 IDT" name="AfterClass" finished-at="2023-04-29T12:19:04 IDT" duration-ms="130" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_On_Sale -->
+    <test started-at="2023-05-03T22:17:05 IDT" name="Command line test" finished-at="2023-05-03T22:19:33 IDT" duration-ms="148437">
       <class name="Testing.TestNG_Cart">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Cart@6aef4fa]" started-at="2023-04-29T12:16:09 IDT" name="BeforeClass" finished-at="2023-04-29T12:16:15 IDT" duration-ms="6083" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Cart@1e607a5a]" started-at="2023-05-03T22:17:05 IDT" name="BeforeClass" finished-at="2023-05-03T22:17:23 IDT" duration-ms="18596" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="T05_Check_item_price_test()[pri:1, instance:Testing.TestNG_Cart@6aef4fa]" started-at="2023-04-29T12:16:15 IDT" name="T05_Check_item_price_test" finished-at="2023-04-29T12:16:24 IDT" duration-ms="8909" status="PASS">
+        <test-method signature="T05_Check_item_price_test()[pri:1, instance:Testing.TestNG_Cart@1e607a5a]" started-at="2023-05-03T22:17:23 IDT" name="T05_Check_item_price_test" finished-at="2023-05-03T22:17:40 IDT" duration-ms="16830" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- T05_Check_item_price_test -->
-        <test-method signature="T06_Check_item_price_updated_test()[pri:2, instance:Testing.TestNG_Cart@6aef4fa]" started-at="2023-04-29T12:16:24 IDT" name="T06_Check_item_price_updated_test" finished-at="2023-04-29T12:16:39 IDT" duration-ms="15613" status="PASS">
+        <test-method signature="T06_Check_item_price_updated_test()[pri:2, instance:Testing.TestNG_Cart@1e607a5a]" started-at="2023-05-03T22:17:40 IDT" name="T06_Check_item_price_updated_test" finished-at="2023-05-03T22:17:56 IDT" duration-ms="16510" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- T06_Check_item_price_updated_test -->
-        <test-method signature="T07_Check_cart_float_number_test()[pri:3, instance:Testing.TestNG_Cart@6aef4fa]" started-at="2023-04-29T12:16:39 IDT" name="T07_Check_cart_float_number_test" finished-at="2023-04-29T12:17:00 IDT" depends-on-methods="Testing.TestNG_Cart.T06_Check_item_price_updated_test" duration-ms="21022" status="PASS">
+        <test-method signature="T07_Check_cart_float_number_test()[pri:3, instance:Testing.TestNG_Cart@1e607a5a]" started-at="2023-05-03T22:17:56 IDT" name="T07_Check_cart_float_number_test" finished-at="2023-05-03T22:18:18 IDT" depends-on-methods="Testing.TestNG_Cart.T06_Check_item_price_updated_test" duration-ms="21095" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- T07_Check_cart_float_number_test -->
-        <test-method signature="T08_Add_remove_item_by_less_btn_test()[pri:4, instance:Testing.TestNG_Cart@6aef4fa]" started-at="2023-04-29T12:17:00 IDT" name="T08_Add_remove_item_by_less_btn_test" finished-at="2023-04-29T12:17:26 IDT" duration-ms="26003" status="PASS">
+        <test-method signature="T08_Add_remove_item_by_less_btn_test()[pri:4, instance:Testing.TestNG_Cart@1e607a5a]" started-at="2023-05-03T22:18:18 IDT" name="T08_Add_remove_item_by_less_btn_test" finished-at="2023-05-03T22:18:44 IDT" duration-ms="25958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- T08_Add_remove_item_by_less_btn_test -->
-        <test-method signature="T09_Remove_item_by_x_btn_test()[pri:5, instance:Testing.TestNG_Cart@6aef4fa]" started-at="2023-04-29T12:17:26 IDT" name="T09_Remove_item_by_x_btn_test" finished-at="2023-04-29T12:18:18 IDT" duration-ms="51143" status="PASS">
+        <test-method signature="T09_Remove_item_by_x_btn_test()[pri:5, instance:Testing.TestNG_Cart@1e607a5a]" started-at="2023-05-03T22:18:44 IDT" name="T09_Remove_item_by_x_btn_test" finished-at="2023-05-03T22:19:32 IDT" duration-ms="48836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- T09_Remove_item_by_x_btn_test -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Cart@6aef4fa]" started-at="2023-04-29T12:18:18 IDT" name="AfterClass" finished-at="2023-04-29T12:18:18 IDT" duration-ms="133" status="PASS">
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Cart@1e607a5a]" started-at="2023-05-03T22:19:32 IDT" name="AfterClass" finished-at="2023-05-03T22:19:33 IDT" duration-ms="583" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
       </class> <!-- Testing.TestNG_Cart -->
-      <class name="Testing.TestNG_Optic">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Optic@1526b1c2]" started-at="2023-04-29T12:19:04 IDT" name="BeforeClass" finished-at="2023-04-29T12:19:07 IDT" duration-ms="3382" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T13_verify_proper_filtering()[pri:0, instance:Testing.TestNG_Optic@1526b1c2]" started-at="2023-04-29T12:19:07 IDT" name="T13_verify_proper_filtering" finished-at="2023-04-29T12:19:12 IDT" duration-ms="4795" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T13_verify_proper_filtering -->
-        <test-method signature="T14_verify_that_all_elements_got_picture()[pri:0, instance:Testing.TestNG_Optic@1526b1c2]" started-at="2023-04-29T12:19:12 IDT" name="T14_verify_that_all_elements_got_picture" finished-at="2023-04-29T12:19:14 IDT" duration-ms="2649" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T14_verify_that_all_elements_got_picture -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Optic@1526b1c2]" started-at="2023-04-29T12:19:14 IDT" name="AfterClass" finished-at="2023-04-29T12:19:15 IDT" duration-ms="112" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_Optic -->
-      <class name="Testing.TestNG_Links">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Testing.TestNG_Links@2edf197b]" started-at="2023-04-29T12:19:20 IDT" name="BeforeClass" finished-at="2023-04-29T12:19:25 IDT" duration-ms="4693" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="T16_Navigation_to_item_page_when_item_out_of_stock_test()[pri:0, instance:Testing.TestNG_Links@2edf197b]" started-at="2023-04-29T12:19:25 IDT" name="T16_Navigation_to_item_page_when_item_out_of_stock_test" finished-at="2023-04-29T12:19:47 IDT" duration-ms="22288" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T16_Navigation_to_item_page_when_item_out_of_stock_test -->
-        <test-method signature="T17_Navigation_to_item_page_test()[pri:0, instance:Testing.TestNG_Links@2edf197b]" started-at="2023-04-29T12:19:47 IDT" name="T17_Navigation_to_item_page_test" finished-at="2023-04-29T12:20:10 IDT" duration-ms="22720" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T17_Navigation_to_item_page_test -->
-        <test-method signature="T18_Search_item_via_category_submenu()[pri:0, instance:Testing.TestNG_Links@2edf197b]" started-at="2023-04-29T12:20:10 IDT" name="T18_Search_item_via_category_submenu" finished-at="2023-04-29T12:20:16 IDT" duration-ms="6164" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T18_Search_item_via_category_submenu -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Testing.TestNG_Links@2edf197b]" started-at="2023-04-29T12:20:16 IDT" name="AfterClass" finished-at="2023-04-29T12:20:16 IDT" duration-ms="180" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Testing.TestNG_Links -->
-    </test> <!-- SuperPharmProject -->
-  </suite> <!-- anyName -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
 </testng-results>

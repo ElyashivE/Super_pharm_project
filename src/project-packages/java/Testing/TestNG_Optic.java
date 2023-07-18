@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -61,18 +62,21 @@ public class TestNG_Optic
             navigate_to_optic_menu_and_submenu(sunglasses);
             set_filtering();
             List<WebElement> itemlist = Functions.elementList(driver,item_list);
-            int actual_result = compare_list_items_price_in_range(itemlist);
-            int expected_result = itemlist.size();
-            if(actual_result == expected_result)
-                Test13.pass(MarkupHelper.createLabel("test passed - all the elements after filter are in the price range allowed",ExtentColor.GREEN));
-            else
-                Test13.fail("test failed - not all elements after filter are in the price range allowed");
-            Test13.info("actual result: "+actual_result);
-            Test13.info("expected result: "+expected_result);
+            String actual_result = String.valueOf(compare_list_items_price_in_range(itemlist));
+            String expected_result = String.valueOf(itemlist.size());
+            String testDescription = "אנחנו מצפים שכל הפריטים המפולטרים יהיו בטווח המחירים שהוגדר";
+            boolean result = Functions.resultPrint(Test13,expected_result,actual_result,testDescription);
+            Assert.assertTrue(result);
+//            if(actual_result == expected_result)
+//                Test13.pass(MarkupHelper.createLabel("test passed - all the elements after filter are in the price range allowed",ExtentColor.GREEN));
+//            else
+//                Test13.fail("test failed - not all elements after filter are in the price range allowed");
+//            Test13.info("actual result: "+actual_result);
+//            Test13.info("expected result: "+expected_result);
         }
         catch (Exception e)
         {
-            Test13.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test13, e);
         }
     }
     @Test
@@ -88,22 +92,25 @@ public class TestNG_Optic
                 //לוקח את השם של הפריט מהערך alt
                 imageLessTitleList.add((imageLessList.get(i).getAttribute("alt")));
             }
-            int actual_result = imageLessList.size();
+            String actual_result = String.valueOf(imageLessList.size());
             //הכוונה ל 0 זה שלכל האלמנטים יש תמונה
-            int expected_result = 0;
-            if(actual_result == expected_result)
-                Test14.pass("test passed - all the elements got picture");
-            else
-            {
-                Test14.fail(MarkupHelper.createLabel("test failed - see below elements with no picture", ExtentColor.RED));
-                Test14.fail(MarkupHelper.createUnorderedList(imageLessTitleList));
-            }
-            Test14.info("actual result: "+actual_result);
-            Test14.info("expected result: "+expected_result);
+            String expected_result = String.valueOf(0);
+            String testDescription = "אנחנו מצפים שלכל התמוצרים תהיה תמונה להמחשה";
+            boolean result = Functions.resultPrint(Test14,expected_result,actual_result,testDescription);
+            Assert.assertTrue(result);
+//            if(actual_result == expected_result)
+//                Test14.pass("test passed - all the elements got picture");
+//            else
+//            {
+//                Test14.fail(MarkupHelper.createLabel("test failed - see below elements with no picture", ExtentColor.RED));
+//                Test14.fail(MarkupHelper.createUnorderedList(imageLessTitleList));
+//            }
+//            Test14.info("actual result: "+actual_result);
+//            Test14.info("expected result: "+expected_result);
         }
         catch (Exception e)
         {
-            Test14.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test14, e);
         }
     }
     public static void navigate_to_optic_menu_and_submenu(By by)

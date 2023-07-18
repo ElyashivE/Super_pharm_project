@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -73,8 +74,6 @@ public class TestNG_Links
             Functions.search_item("toni's");
             List<WebElement> itemTitleList = Functions.elementList(driver,items_list);
             List<WebElement> itemAddToCartBtnList = Functions.elementList(driver,add_to_cart_btn);
-//            WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-//            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(items_list));
             Functions.waitByPresenceOfElementLoc(items_list);
             for (int i = 0; i < itemTitleList.size(); i++)
             {
@@ -114,7 +113,7 @@ public class TestNG_Links
         }
         catch (Exception e)
         {
-            Test16.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test16, e);
         }
     }
     @Test
@@ -125,17 +124,20 @@ public class TestNG_Links
             driver.get("https://shop.super-pharm.co.il/");
             String expected_result = "3OL קמומילו אורל- ג'ל לטיפול בפה אצל תינוקות";
             String actual_result = go_to_item_page_and_get_item_title("קמומילו ג'ל");
-            if (actual_result.equals(expected_result))
-                Test17.pass(MarkupHelper.createLabel("test passed - item page found", ExtentColor.GREEN));
-            else {
-                Test17.fail("test failed - item page not found");
-            }
-            Test17.info("actual item title is: " + actual_result);
-            Test17.info("expected item title is: " + expected_result);
+            String testDescription = "אנחנו מצפים לניווט נכון לדף מוצר ע''י השוואה של כותרת המוצר לפני כניסה לדף ולאחר כניסה";
+            boolean result = Functions.resultPrint(Test17,expected_result,actual_result,testDescription);
+            Assert.assertTrue(result);
+//            if (actual_result.equals(expected_result))
+//                Test17.pass(MarkupHelper.createLabel("test passed - item page found", ExtentColor.GREEN));
+//            else {
+//                Test17.fail("test failed - item page not found");
+//            }
+//            Test17.info("actual item title is: " + actual_result);
+//            Test17.info("expected item title is: " + expected_result);
         }
         catch (Exception e)
         {
-            Test17.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test17, e);
         }
     }
     @Test
@@ -154,16 +156,21 @@ public class TestNG_Links
             List<WebElement> list = Functions.elementList(driver,result_search_elements);
             int actual_result = list.size();
             int expected_result = 10;
-            if (actual_result > 10)
-                Test18.pass(MarkupHelper.createLabel("test passed - number of elements shown in the result are higher then 10", ExtentColor.GREEN));
-            else
-                Test18.fail("test failed - number of elements shown in the result equal or lower then 10");
-            Test18.info("actual result is: "+actual_result);
-            Test18.info("expected result is: "+expected_result);
+            String testDescription = "אנחנו מצפים שתוצאות החיפוש יציגו ערך ערך גבוה מהמצופה";
+            boolean result = Functions.resultPrintInt(Test18,actual_result,expected_result,0,testDescription);
+            Test18.info("Actual Result: "+actual_result);
+            Test18.info("Expected Result: "+expected_result);
+            Assert.assertTrue(result);
+//            if (actual_result > 10)
+//                Test18.pass(MarkupHelper.createLabel("test passed - number of elements shown in the result are higher then 10", ExtentColor.GREEN));
+//            else
+//                Test18.fail("test failed - number of elements shown in the result equal or lower then 10");
+//            Test18.info("actual result is: "+actual_result);
+//            Test18.info("expected result is: "+expected_result);
         }
         catch (Exception e)
         {
-            Test18.fail(MarkupHelper.createLabel("error!!! exception",ExtentColor.YELLOW));
+            Functions.ex(Test18, e);
         }
 
     }
